@@ -41,32 +41,45 @@
 
 <body class="font-lexend">
     <!-- Navbar start -->
-    <section class="bg-secondary mb-14">
-        <header>
+    <section class="mb-10">
+        <header class="bg-secondary mb-14">
             <nav class="px-2 lg:px-32 py-5">
                 <div class="navbar">
                     <!-- Button -->
                     <div class="navbar-start hidden lg:block">
-                        <button class="btn bg-primary px-8 text-xl font-bold">Blog</button>
+                        <div class="navbar-start hidden lg:block">
+                            <button class="btn bg-primary px-8 text-xl font-bold"
+                                onclick="location.href='./faq.html'">Blog</button>
+                        </div>
                     </div>
                     <!-- Middle -->
                     <div class="navbar-center gap-3">
-                        <img src="./assets/logo.png" alt="">
+                        <img src="/assets/logo.png" alt="">
                         <h3 class="text-xl font-bold">Donate Bangladesh</h3>
                     </div>
                     <!-- Last -->
                     <div class="navbar-end gap-2">
-                        <img src="./assets/coin.png" alt="">
-                        <h3 class="text-xl font-semibold">5500 <span>BDT</span></h3>
+                        <img src="assets/coin.png" alt="">
+                        <h3 id="main-balance" class="text-xl font-semibold">100000</h3>
+                        <span class="text-xl font-semibold">BDT</span>
                     </div>
                 </div>
             </nav>
             <!-- Navbar end -->
+        </header>
+        <!-- Two button -->
+        <div class="flex justify-center items-center gap-10 mb-10">
+            <button class="bg-primary px-8 py-4 rounded-lg text-xl font-bold">Donation</button>
+            <button
+                class="bg-white px-8 py-4 border border-gray-300 rounded-lg text-xl text-tcolor font-bold">History</button>
+        </div>
     </section>
+
     <main>
         <section class="px-2 lg:px-36 space-y-10">
             <div>
-                <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+                <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i>
+                </h1>
             </div>
             <div>
                 <div class="join join-vertical w-full">
@@ -75,7 +88,8 @@
                         <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
                         <div class="collapse-content">
                             <p class="text-xl">The Document Object Model (DOM) is a programming interface that
-                                represents the structure of a web page as a tree of objects, allowing scripts like <br class="hidden lg:block">
+                                represents the structure of a web page as a tree of objects, allowing scripts like <br
+                                    class="hidden lg:block">
                                 JavaScript to interact with and modify the HTML document dynamically.</p>
                         </div>
                     </div>
@@ -86,7 +100,8 @@
                         <div class="collapse-content">
                             <div class="text-xl space-y-3">
                                 <p>In JavaScript, you can select an element from the DOM using methods like
-                                    document.getElementById() to select an element by its ID, or <br class="hidden lg:block">
+                                    document.getElementById() to select an element by its ID, or <br
+                                        class="hidden lg:block">
                                     document.querySelector() to select the first element that matches a specified CSS
                                     selector (like a class, tag, or ID).</p>
                             </div>
@@ -99,7 +114,8 @@
                         <div class="collapse-content">
                             <p class="text-xl">Event delegation is a technique in the DOM where a single event listener
                                 is added to a
-                                parent element to handle events from multiple child elements. Instead of <br class="hidden lg:block"> attaching
+                                parent element to handle events from multiple child elements. Instead of <br
+                                    class="hidden lg:block"> attaching
                                 multiple event listeners to each child, the event bubbles up to the parent, which
                                 captures and handles it efficiently.</p>
                         </div>
@@ -111,7 +127,8 @@
                         styles using the DOM?</div>
                     <div class="collapse-content">
                         <p class="text-xl">In the DOM, you can manipulate an element's attributes and styles to change
-                            how it looks and behaves dynamically. To modify an element's attributes, <br class="hidden lg:block"> such as id, src, or
+                            how it looks and behaves dynamically. To modify an element's attributes, <br
+                                class="hidden lg:block"> such as id, src, or
                             href, you can use methods like setAttribute() or directly assign values using property
                             accessors like element. id = "newId".</p>
                     </div>
