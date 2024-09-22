@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch 10 Assignment 5</title>
+    <link rel="stylesheet" href="./bonus.html">
+    <link rel="stylesheet" href="./history.html">
+    <!-- Font: Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Link: Font-awesome CDN -->
+    <script src="https://kit.fontawesome.com/c9b48ef8a4.js" crossorigin="anonymous"></script>
+
+    <!-- Link: TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#F9F7F3',
+                        tcolor: '#111111B3',
+                    },
+                    fontFamily: {
+                        lexend: ['Lexend', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-lexend">
+    <!-- Navbar start -->
+    <section class="bg-secondary mb-14">
+        <header>
+            <nav class="px-2 lg:px-32 py-5">
+                <div class="navbar">
+                    <!-- Button -->
+                    <div class="navbar-start hidden lg:block">
+                        <button class="btn bg-primary px-8 text-xl font-bold">Blog</button>
+                    </div>
+                    <!-- Middle -->
+                    <div class="navbar-center gap-3">
+                        <img src="./assets/logo.png" alt="">
+                        <h3 class="text-xl font-bold">Donate Bangladesh</h3>
+                    </div>
+                    <!-- Last -->
+                    <div class="navbar-end gap-2">
+                        <img src="./assets/coin.png" alt="">
+                        <h3 class="text-xl font-semibold">5500 <span>BDT</span></h3>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar end -->
+    </section>
+    <main>
+        <section class="px-2 lg:px-36 space-y-10">
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+            </div>
+            <div>
+                <div class="join join-vertical w-full">
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" checked="checked" />
+                        <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
+                        <div class="collapse-content">
+                            <p class="text-xl">The Document Object Model (DOM) is a programming interface that
+                                represents the structure of a web page as a tree of objects, allowing scripts like <br class="hidden lg:block">
+                                JavaScript to interact with and modify the HTML document dynamically.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?
+                        </div>
+                        <div class="collapse-content">
+                            <div class="text-xl space-y-3">
+                                <p>In JavaScript, you can select an element from the DOM using methods like
+                                    document.getElementById() to select an element by its ID, or <br class="hidden lg:block">
+                                    document.querySelector() to select the first element that matches a specified CSS
+                                    selector (like a class, tag, or ID).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the
+                            DOM, and why is it useful?</div>
+                        <div class="collapse-content">
+                            <p class="text-xl">Event delegation is a technique in the DOM where a single event listener
+                                is added to a
+                                parent element to handle events from multiple child elements. Instead of <br class="hidden lg:block"> attaching
+                                multiple event listeners to each child, the event bubbles up to the parent, which
+                                captures and handles it efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-xl">In the DOM, you can manipulate an element's attributes and styles to change
+                            how it looks and behaves dynamically. To modify an element's attributes, <br class="hidden lg:block"> such as id, src, or
+                            href, you can use methods like setAttribute() or directly assign values using property
+                            accessors like element. id = "newId".</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
