@@ -37,29 +37,17 @@
             },
         }
     </script>
-
-    <style>
-        #navbar.position-sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, .5);
-            backdrop-filter: blur(14px);
-            z-index: 1;
-        }
-    </style>
-
 </head>
 
 <body class="font-lexend">
     <!-- Navbar start -->
-    <section id="navbar">
-        <header class="bg-secondary mb-5">
+    <section class="sticky top-0 z-10 mb-10">
+        <header class="bg-secondary backdrop-blur-2xl mb-5">
             <nav class="px-2 lg:px-32 py-5 flex flex-col lg:flex-row justify-between items-center gap-3">
                 <!-- First -->
                 <div>
                     <button class="btn bg-primary px-8 text-xl font-bold"
-                        onclick="location.href='./faq.html'">Blog</button>
+                        onclick="location.href='./index.html'">Home</button>
                 </div>
                 <!-- Middle -->
                 <div>
@@ -78,15 +66,9 @@
                 </div>
             </nav>
         </header>
-        <!-- Home button -->
-        <div id="btn-donate" class="flex justify-center items-center gap-10 mb-10"
-            onclick="location.href='./index.html'">
-            <button id="donate-tab" class="btn bg-primary text-xl font-bold border border-gray-300"
-                onclick="handleSelectBtn(this)">Home</button>
-        </div>
     </section>
 
-    <main class="mb-40">
+    <main class="mb-64">
         <section class="p-5 lg:px-36 space-y-10">
             <div>
                 <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i>
@@ -98,7 +80,7 @@
                         <input type="radio" name="my-accordion-4" checked="checked" />
                         <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
                         <div class="collapse-content">
-                            <p class="text-xl">The Document Object Model (DOM) is a programming interface that
+                            <p class="text-lg">The Document Object Model (DOM) is a programming interface that
                                 represents the structure of a web page as a tree of objects, allowing scripts like <br
                                     class="hidden lg:block">
                                 JavaScript to interact with and modify the HTML document dynamically.</p>
@@ -109,13 +91,12 @@
                         <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?
                         </div>
                         <div class="collapse-content">
-                            <div class="text-xl space-y-3">
-                                <p>In JavaScript, you can select an element from the DOM using methods like
-                                    document.getElementById() to select an element by its ID, or <br
-                                        class="hidden lg:block">
-                                    document.querySelector() to select the first element that matches a specified CSS
-                                    selector (like a class, tag, or ID).</p>
-                            </div>
+                            <p class="text-lg">In JavaScript, you can select an element from the DOM using methods like
+                                document.getElementById() to select an element by its ID, or <br
+                                    class="hidden lg:block">
+                                document.querySelector() to select the first element that matches a specified CSS
+                                selector (like a class, tag, or ID).
+                            </p>
                         </div>
                     </div>
                     <div class="collapse collapse-arrow join-item border-base-300 border">
@@ -123,7 +104,7 @@
                         <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the
                             DOM, and why is it useful?</div>
                         <div class="collapse-content">
-                            <p class="text-xl">Event delegation is a technique in the DOM where a single event listener
+                            <p class="text-lg">Event delegation is a technique in the DOM where a single event listener
                                 is added to a
                                 parent element to handle events from multiple child elements. <br
                                     class="hidden lg:block"> Instead of attaching
@@ -131,29 +112,26 @@
                                 captures and handles it efficiently.</p>
                         </div>
                     </div>
-                </div>
-                <div class="collapse collapse-arrow join-item border-base-300 border">
-                    <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and
-                        styles using the DOM?</div>
-                    <div class="collapse-content">
-                        <p class="text-xl">In the DOM, you can manipulate an element's attributes and styles to change
-                            how it looks and behaves dynamically. To modify an element's attributes, <br
-                                class="hidden lg:block"> such as id, src, or
-                            href, you can use methods like setAttribute() or directly assign values using property
-                            accessors like element. id = "newId".</p>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes
+                            and
+                            styles using the DOM?</div>
+                        <div class="collapse-content">
+                            <p class="text-lg">In the DOM, you can manipulate an element's attributes and styles to
+                                change
+                                how it looks and behaves dynamically. To modify an element's attributes, <br
+                                    class="hidden lg:block"> such as id, src, or
+                                href, you can use methods like setAttribute() or directly assign values using property
+                                accessors like element. id = "newId".</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
     <!-- main section end -->
-
     <footer class="bg-secondary p-10"></footer>
-
-    <!-- Java Script link connect -->
-    <script src="js/navbarSticky.js"></script>
 </body>
 
 </html>

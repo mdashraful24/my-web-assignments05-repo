@@ -100,7 +100,6 @@ document.getElementById('donation-btn-quota')
         else { alert('Invalid Input') }
     });
 
-
 document.getElementById('history-tab').addEventListener('click', function () {
     showSection('history-of-transaction');
     hideSection('cards');
@@ -109,6 +108,7 @@ document.getElementById('history-tab').addEventListener('click', function () {
     const history = document.getElementById('history-tab');
     history.style.backgroundColor = '#B4F461'
 })
+
 document.getElementById('donate-tab').addEventListener('click', function () {
     hideSection('history-of-transaction');
     showSection('cards');

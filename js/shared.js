@@ -17,7 +17,6 @@ function hideSection(id) {
     document.getElementById(id).classList.add('hidden');
 }
 
-
 function showSection(id) {
     document.getElementById(id).classList.remove('hidden');
 }

@@ -35,23 +35,12 @@
             },
         }
     </script>
-
-    <style>
-        #navbar.position-sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, .5);
-            backdrop-filter: blur(14px);
-        }
-    </style>
-
 </head>
 
 <body class="font-lexend">
     <!-- Navbar start -->
-    <section id="navbar">
-        <header class="bg-secondary mb-5">
+    <section class="sticky top-0 z-10 mb-10 backdrop-blur-2xl bg-[rgba(255, 255, 255, .5)]">
+        <header class="bg-secondary  mb-5">
             <nav class="px-2 lg:px-32 py-5 flex flex-col lg:flex-row justify-between items-center gap-3">
                 <!-- First -->
                 <div>
@@ -62,7 +51,7 @@
                 <div>
                     <div class="flex items-center gap-3">
                         <img src="/assets/logo.png" alt="">
-                        <h3 class="text-xl font-bold">Donate Bangladesh</h3>
+                        <h3 class="text-xl lg:text-3xl font-extrabold">Donate Bangladesh</h3>
                     </div>
                 </div>
                 <!-- Last -->
@@ -76,7 +65,7 @@
             </nav>
         </header>
         <!-- Two button -->
-        <div class="flex justify-center items-center gap-10 mb-6">
+        <div class="flex justify-center items-center gap-10 py-5">
             <button id="donate-tab" class="btn bg-primary text-xl font-bold border border-gray-300"
                 onclick="handleSelectBtn(this)">Donate</button>
             <button id="history-tab" class="btn bg-white text-xl font-bold border border-gray-300"
@@ -84,12 +73,12 @@
         </div>
     </section>
 
-    <main class="mt-10 mb-20">
+    <main class="mb-20">
         <!-- Cards -->
         <section id="cards">
-            <div class="space-y-8">
+            <div class="space-y-10">
                 <!-- first card -->
-                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto">
+                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto shadow-lg">
                     <div class="flex flex-col lg:flex-row justify-center items-center gap-10 p-4">
                         <div>
                             <img class="w-full" src="./assets/noakhali.png" alt="">
@@ -107,16 +96,15 @@
                                 as homes, roads, and farmland were submerged. Seven municipalities were hit hardest.
                                 Schools were forced to close, and local authorities initiated relief efforts to provide
                                 support to the affected communities.</p>
-                            <input id="donation-inp-noakhali" class="w-full p-2 border border-gray-300 rounded-lg"
+                            <input id="donation-inp-noakhali" class="w-full p-3 border border-gray-300 rounded-lg"
                                 type="text" name="" id="" placeholder="Write Donation Amount">
-                            <button id="donation-btn-noakhali" class="btn bg-primary w-full text-xl font-bold"
-                                onclick="modalBox">Donate
+                            <button id="donation-btn-noakhali" class="btn bg-primary w-full text-xl font-bold">Donate
                                 Now</button>
                         </div>
                     </div>
                 </div>
                 <!-- second card -->
-                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto">
+                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto shadow-lg">
                     <div class="flex flex-col lg:flex-row justify-center items-center gap-10 p-4">
                         <div>
                             <img class="w-full" src="./assets/feni.png" alt="">
@@ -127,24 +115,21 @@
                                 <h3 id="donate-feni" class="text-lg font-semibold">0</h3>
                                 <span class="text-lg font-semibold">BDT</span>
                             </button>
-                            <h4 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h4>
-                            <p class="text-tcolor text-justify">In 2024, Noakhali experienced devastating flooding due
-                                to
-                                continuous heavy rainfall and surging river levels. Over 2 million people were affected
-                                as
-                                homes, roads, and farmland were submerged. Seven municipalities were hit hardest, with
-                                widespread waterlogging disrupting daily life. Schools were forced to close, and local
-                                authorities launched relief efforts to assist those impacted.</p>
-                            <input id="donation-inp-feni" class="w-full p-2 border border-gray-300 rounded-lg"
+                            <h4 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h4>
+                            <p class="text-tcolor text-justify">In August 2024, devastating floods hit Feni district in
+                                southeastern Bangladesh, displacing hundreds of thousands and inundating more than 100
+                                villages. The floods, caused by heavy monsoon rains and water releases from upstream in
+                                India, inflicted widespread damage on homes, infrastructure, and agriculture. Over
+                                350,000 people were left without electricity.</p>
+                            <input id="donation-inp-feni" class="w-full p-3 border border-gray-300 rounded-lg"
                                 type="text" name="" id="" placeholder="Write Donation Amount">
-                            <button id="donation-btn-feni" class="btn bg-primary w-full text-xl font-bold"
-                                onclick="modalBox">Donate
+                            <button id="donation-btn-feni" class="btn bg-primary w-full text-xl font-bold">Donate
                                 Now</button>
                         </div>
                     </div>
                 </div>
                 <!-- third card -->
-                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto">
+                <div class="w-11/12 lg:w-3/4 border rounded-2xl mx-auto shadow-lg">
                     <div class="flex flex-col lg:flex-row justify-center items-center gap-10 p-4">
                         <div>
                             <img class="w-full" src="./assets/quota-protest.png" alt="">
@@ -155,18 +140,17 @@
                                 <h3 id="donate-quota" class="text-lg font-semibold">0</h3>
                                 <span class="text-lg font-semibold">BDT</span>
                             </button>
-                            <h4 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h4>
-                            <p class="text-tcolor text-justify">In 2024, Noakhali experienced devastating flooding due
-                                to
-                                continuous heavy rainfall and surging river levels. Over 2 million people were affected
-                                as
-                                homes, roads, and farmland were submerged. Seven municipalities were hit hardest, with
-                                widespread waterlogging disrupting daily life. Schools were forced to close, and local
-                                authorities launched relief efforts to assist those impacted.</p>
-                            <input id="donation-inp-quota" class="w-full p-2 border border-gray-300 rounded-lg"
+                            <h4 class="text-xl font-bold">Aid for Injured in the Quota Movement</h4>
+                            <p class="text-tcolor text-justify">In 2024, the Bangladesh quota reform movement reignited
+                                dissatisfaction with the civil service quota system, particularly the 30% reservation
+                                for descendants of independence war veterans. Led primarily by students and young
+                                professionals, protesters demanded a reduction in quota percentages, a greater emphasis
+                                on merit in job recruitment, and increased transparency. The movement gained momentum
+                                after a court ruling reinstated the quota system, which had been abolished following
+                                similar protests in 2018.</p>
+                            <input id="donation-inp-quota" class="w-full p-3 border border-gray-300 rounded-lg"
                                 type="text" name="" id="" placeholder="Write Donation Amount">
-                            <button id="donation-btn-quota" class="btn bg-primary w-full text-xl font-bold"
-                                onclick="modalBox">Donate
+                            <button id="donation-btn-quota" class="btn bg-primary w-full text-xl font-bold">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -176,8 +160,7 @@
 
         <!-- History start -->
         <section>
-            <div id="history-of-transaction" class="hidden">
-            </div>
+            <div id="history-of-transaction" class="hidden"></div>
         </section>
         <!-- History end -->
 
@@ -200,7 +183,7 @@
         <!-- Modal end -->
     </main>
 
-    <footer class="bg-secondary p-10"></footer>
+    <footer class="bg-secondary p-10 flex items-end"></footer>
 
     <!-- Java Script link connect -->
     <script src="js/donation.js"></script>
