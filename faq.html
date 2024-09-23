@@ -37,17 +37,27 @@
             },
         }
     </script>
+
+    <style>
+        #navbar.position-sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #F9F7F3;
+        }
+    </style>
+
 </head>
 
 <body class="font-lexend">
     <!-- Navbar start -->
-    <section class="mb-10">
-        <header class="bg-secondary mb-14">
+    <section id="navbar">
+        <header class="bg-secondary mb-5">
             <nav class="px-2 lg:px-32 py-5">
-                <div class="navbar">
+                <div class="navbar flex-col lg:flex-row">
                     <!-- Button -->
-                    <div class="navbar-start hidden lg:block">
-                        <div class="navbar-start hidden lg:block">
+                    <div class="navbar-start">
+                        <div class="navbar-start">
                             <button class="btn bg-primary px-8 text-xl font-bold"
                                 onclick="location.href='./faq.html'">Blog</button>
                         </div>
@@ -68,15 +78,15 @@
             <!-- Navbar end -->
         </header>
         <!-- Two button -->
-        <div class="flex justify-center items-center gap-10 mb-10">
-            <button class="bg-primary px-8 py-4 rounded-lg text-xl font-bold">Donation</button>
-            <button
-                class="bg-white px-8 py-4 border border-gray-300 rounded-lg text-xl text-tcolor font-bold">History</button>
+        <div id="btn-donate" class="flex justify-center items-center gap-10 mb-10"
+            onclick="location.href='./index.html'">
+            <button id="donate-tab" class="btn bg-primary text-xl font-bold border border-gray-300"
+                onclick="handleSelectBtn(this)">Home Page</button>
         </div>
     </section>
 
     <main>
-        <section class="px-2 lg:px-36 space-y-10">
+        <section class="p-5 lg:px-36 space-y-10">
             <div>
                 <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i>
                 </h1>
@@ -137,6 +147,10 @@
             </div>
         </section>
     </main>
+    <!-- main section end -->
+
+    <!-- Java Script link connect -->
+    <script src="js/navbarSticky.js"></script>
 </body>
 
 </html>

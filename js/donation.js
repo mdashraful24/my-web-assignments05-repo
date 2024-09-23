@@ -13,10 +13,12 @@ document.getElementById('donation-btn-noakhali')
             document.getElementById('main-balance').innerText = subMainBalance;
 
             const history = document.createElement('div');
-            history.classList.add('m-10');
+            history.classList.add('m-6');
             history.innerHTML = `
-            <h3 class="font-bold text-center">${addDonateAmount} Taka donated for Feni-Flood, Bangladesh</h3>
-            <p class="text-center">Date: ${dateToday}</p>`
+            <div class="w-11/12 lg:w-3/4 border p-7 rounded-2xl mx-auto space-y-5">
+            <h3 class="text-xl font-bold">${addDonateAmount} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h3>
+            <p class="">Date: ${dateToday}</p>
+            </div>`
             document.getElementById('history').appendChild(history);
         }
         else {
@@ -37,10 +39,12 @@ document.getElementById('donation-btn-feni')
             document.getElementById('main-balance').innerText = subMainBalance;
 
             const history = document.createElement('div');
-            history.classList.add('m-10');
+            history.classList.add('m-6');
             history.innerHTML = `
-            <h3 class="font-bold text-center">${addDonateAmount} Taka donated for Feni-Flood, Bangladesh</h3>
-            <p class="text-center">Date: ${dateToday}</p>`
+            <div class="w-11/12 lg:w-3/4 border p-7 rounded-2xl mx-auto space-y-5">
+            <h3 class="text-xl font-bold">${addDonateAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
+            <p class="">Date: ${dateToday}</p>
+            </div>`
             document.getElementById('history').appendChild(history);
         }
         else {
@@ -61,21 +65,31 @@ document.getElementById('donation-btn-quota')
             document.getElementById('main-balance').innerText = subMainBalance;
 
             const history = document.createElement('div');
-            history.classList.add('m-10');
+            history.classList.add('m-6');
             history.innerHTML = `
-            <h3 class="font-bold text-center">${addDonateAmount} Taka donated for Injured Students in Quota Movement, Bangladesh</h3>
-            <p class="text-center">Date: ${dateToday}</p>`
+            <div class="w-11/12 lg:w-3/4 border p-7 rounded-2xl mx-auto space-y-5">
+            <h3 class="text-xl font-bold">${addDonateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+            <p class="">Date: ${dateToday}</p>
+            </div>`
             document.getElementById('history').appendChild(history);
         }
         else { alert('Invalid Input') }
     });
 
 
-document.getElementById('btn-history').addEventListener('click', function () {
+document.getElementById('history-tab').addEventListener('click', function () {
     showSection('history');
     hideSection('cards');
+    const donate = document.getElementById('donate-tab');
+    donate.style.backgroundColor = 'white'
+    const history = document.getElementById('history-tab');
+    history.style.backgroundColor = '#B4F461'
 })
-document.getElementById('btn-donate').addEventListener('click', function () {
+document.getElementById('donate-tab').addEventListener('click', function () {
     hideSection('history');
     showSection('cards');
-})
+    const history = document.getElementById('history-tab');
+    history.style.backgroundColor = 'white'
+    const donate = document.getElementById('donate-tab');
+    donate.style.backgroundColor = '#B4F461'
+});

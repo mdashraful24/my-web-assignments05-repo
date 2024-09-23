@@ -24,3 +24,8 @@ function showSection(id){
 function hideSection(id){
     document.getElementById(id).classList.add('hidden');
 }
+
+document.getElementById('btn-continue')
+    .addEventListener('click', function () {
+        // window.location.reload();
+    })
