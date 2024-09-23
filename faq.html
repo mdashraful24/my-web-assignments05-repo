@@ -43,7 +43,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #F9F7F3;
+            background-color: rgba(255, 255, 255, .5);
+            backdrop-filter: blur(14px);
+            z-index: 1;
         }
     </style>
 
@@ -53,39 +55,38 @@
     <!-- Navbar start -->
     <section id="navbar">
         <header class="bg-secondary mb-5">
-            <nav class="px-2 lg:px-32 py-5">
-                <div class="navbar flex-col lg:flex-row">
-                    <!-- Button -->
-                    <div class="navbar-start">
-                        <div class="navbar-start">
-                            <button class="btn bg-primary px-8 text-xl font-bold"
-                                onclick="location.href='./faq.html'">Blog</button>
-                        </div>
-                    </div>
-                    <!-- Middle -->
-                    <div class="navbar-center gap-3">
+            <nav class="px-2 lg:px-32 py-5 flex flex-col lg:flex-row justify-between items-center gap-3">
+                <!-- First -->
+                <div>
+                    <button class="btn bg-primary px-8 text-xl font-bold"
+                        onclick="location.href='./faq.html'">Blog</button>
+                </div>
+                <!-- Middle -->
+                <div>
+                    <div class="flex items-center gap-3">
                         <img src="/assets/logo.png" alt="">
                         <h3 class="text-xl font-bold">Donate Bangladesh</h3>
                     </div>
-                    <!-- Last -->
-                    <div class="navbar-end gap-2">
+                </div>
+                <!-- Last -->
+                <div>
+                    <div class="flex items-center gap-2">
                         <img src="assets/coin.png" alt="">
                         <h3 id="main-balance" class="text-xl font-semibold">100000</h3>
                         <span class="text-xl font-semibold">BDT</span>
                     </div>
                 </div>
             </nav>
-            <!-- Navbar end -->
         </header>
-        <!-- Two button -->
+        <!-- Home button -->
         <div id="btn-donate" class="flex justify-center items-center gap-10 mb-10"
             onclick="location.href='./index.html'">
             <button id="donate-tab" class="btn bg-primary text-xl font-bold border border-gray-300"
-                onclick="handleSelectBtn(this)">Home Page</button>
+                onclick="handleSelectBtn(this)">Home</button>
         </div>
     </section>
 
-    <main>
+    <main class="mb-40">
         <section class="p-5 lg:px-36 space-y-10">
             <div>
                 <h1 class="text-4xl lg:text-5xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i>
@@ -124,8 +125,8 @@
                         <div class="collapse-content">
                             <p class="text-xl">Event delegation is a technique in the DOM where a single event listener
                                 is added to a
-                                parent element to handle events from multiple child elements. Instead of <br
-                                    class="hidden lg:block"> attaching
+                                parent element to handle events from multiple child elements. <br
+                                    class="hidden lg:block"> Instead of attaching
                                 multiple event listeners to each child, the event bubbles up to the parent, which
                                 captures and handles it efficiently.</p>
                         </div>
@@ -148,6 +149,8 @@
         </section>
     </main>
     <!-- main section end -->
+
+    <footer class="bg-secondary p-10"></footer>
 
     <!-- Java Script link connect -->
     <script src="js/navbarSticky.js"></script>
