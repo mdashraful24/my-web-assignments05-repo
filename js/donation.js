@@ -3,13 +3,23 @@ const dateOfToday = new Date();
 function allDonationAreaEl(donateButtonId, donateInputId, donationAmountId, commonAreaId) {
     document.getElementById(donateButtonId).addEventListener('click', function (event) {
         event.preventDefault();
-        const addDonateAmount = getInputFieldValueById(donateInputId);
+        const userInputValues = getInputFieldValueById(donateInputId);
         const donateAmount = getInnerTextById(donationAmountId);
         const mainBalance = getInnerTextById('main-balance');
+
+        for (let check of userInputValues) {
+            if (isNaN(check) === true) {
+                alert('Please provide valid input.');
+                document.getElementById(donateInputId).value = "";
+                return;
+            }
+        }
+
+        const addDonateAmount = parseFloat(userInputValues);
         const addDonation = donateAmount + addDonateAmount;
         const subMainBalance = mainBalance - addDonateAmount;
 
-        if (addDonateAmount > 0 && !isNaN(addDonateAmount)) {
+        if (addDonateAmount > 0) {
             if (mainBalance >= addDonateAmount) {
                 document.getElementById(donationAmountId).innerText = addDonation;
                 document.getElementById('main-balance').innerText = subMainBalance;
