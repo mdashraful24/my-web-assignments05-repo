@@ -3,13 +3,13 @@ function getInputFieldValueById(id) {
     return userInputValues;
 }
 function getInnerTextById(id) {
-    const textValue = document.getElementById(id).innerText;
-    const textToNumber = parseFloat(textValue);
-    return textToNumber;
+    const inputValue = document.getElementById(id).innerText;
+    const parseToNumber = parseFloat(inputValue);
+    return parseToNumber;
 }
-function showSection(id) {
+function toggleBtnShow(id) {
     document.getElementById(id).classList.remove('hidden');
 }
-function hideSection(id) {
+function toggleBtnHide(id) {
     document.getElementById(id).classList.add('hidden');
 }
