@@ -8,17 +8,13 @@
     <!-- Font: Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Font Lexend -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
     <!-- Link: Font-awesome CDN -->
     <script src="https://kit.fontawesome.com/c9b48ef8a4.js" crossorigin="anonymous"></script>
-
     <!-- Link: TailwindCSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -38,7 +34,7 @@
 </head>
 
 <body class="font-lexend">
-    <!-- Navbar start -->
+    <!-- Navbar Starts -->
     <section class="sticky top-0 z-10 mb-16 backdrop-blur-2xl bg-opacity-50">
         <header class="bg-secondary backdrop-blur-2xl bg-opacity-50 mb-5">
             <nav class="px-2 lg:px-32 py-5 flex flex-col lg:flex-row justify-between items-center gap-3">
@@ -72,7 +68,8 @@
                 onclick="handleSelectBtn(this)">History</button>
         </div>
     </section>
-
+    <!-- Navbar Ends -->
+    <!-- Main Section Starts -->
     <main class="mb-20">
         <!-- Cards -->
         <section id="two-btn">
@@ -157,14 +154,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- History start -->
+        <!-- History Starts -->
         <section>
             <div id="history-of-transaction" class="hidden"></div>
         </section>
-        <!-- History end -->
-
-        <!-- Modal start -->
+        <!-- History Ends -->
+        <!-- Modal Starts -->
         <section>
             <dialog id="modalBox" class="modal">
                 <form method="dialog" class="modal-box px-5 py-10 flex flex-col justify-center items-center space-y-5">
@@ -180,11 +175,11 @@
                 </form>
             </dialog>
         </section>
-        <!-- Modal end -->
+        <!-- Modal Ends -->
     </main>
-
+    <!-- Footer Section Starts -->
     <footer class="bg-secondary p-10 flex items-end"></footer>
-
+    <!-- Footer Section Ends -->
     <!-- Java Script link connect -->
     <script src="js/donation.js"></script>
     <script src="js/shared.js"></script>

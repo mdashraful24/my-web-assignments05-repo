@@ -2,13 +2,11 @@ function getInputFieldValueById(id) {
     const userInputValues = document.getElementById(id).value;
     return userInputValues;
 }
-
 function getInnerTextById(id) {
-    const texts = document.getElementById(id).innerText;
-    const textToNumber = parseFloat(texts);
+    const textValue = document.getElementById(id).innerText;
+    const textToNumber = parseFloat(textValue);
     return textToNumber;
 }
-
 function showSection(id) {
     document.getElementById(id).classList.remove('hidden');
 }
